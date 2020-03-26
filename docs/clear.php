@@ -12,6 +12,7 @@
 	    ?lexeme dct:language wd:Q188;
 	            wdt:P5185 ?gender;
 	            wikibase:lemma ?lemma.
+	    FILTER (LCASE(?lemma) != ?lemma)
 	  }
 	  ORDER BY CONCAT(MD5(?lemma), STR(NOW()))
 	  LIMIT 100
